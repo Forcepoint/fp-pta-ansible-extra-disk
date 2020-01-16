@@ -1,0 +1,10 @@
+---
+# defaults file for extra-disk
+
+extra_disk_device_path: /dev/sdb
+
+extra_disk_mount_path: /mnt/extra
+
+extra_disk_fstype: xfs
+
+extra_disk_mount_opts: defaults,_netdev

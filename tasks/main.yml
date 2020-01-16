@@ -1,0 +1,17 @@
+---
+# tasks file for extra-disk
+
+- name: format the extra disk
+  become: yes
+  filesystem:
+    fstype: "{{ extra_disk_fstype }}"
+    dev: "{{ extra_disk_device_path }}"
+
+- name: edit fstab and mount the disk
+  become: yes
+  mount:
+    path: "{{ extra_disk_mount_path }}"
+    src: "{{ extra_disk_device_path }}"
+    state: mounted
+    fstype: "{{ extra_disk_fstype }}"
+    opts: "{{ extra_disk_mount_opts }}"
