@@ -2,6 +2,8 @@
 
 Mounts and formats an extra disk to the specified path.
 
+For information about PTA and how to use it with this Ansible role please visit https://github.com/Forcepoint/fp-pta-overview/blob/master/README.md
+
 ## Requirements
 
 The disk exists.
